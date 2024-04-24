@@ -54,7 +54,6 @@ def new_post():
             conn.close()
 
             return redirect(url_for('index'))
-
     return render_template('add_post.html')
 
 
@@ -76,7 +75,6 @@ def edit(post_id):
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
-
     return render_template('edit.html', post=post)
 
 
@@ -90,7 +88,7 @@ def post_del(post_id):
     # flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 
-#dfhbgfbdfcv
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
